@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;0,900;1,100;1,200;1,300;1,600;1,700;1,800;1,900&family=Shantell+Sans:ital@0;1&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-family: "Poppins", sans-serif;
+    font-family: "Shantell Sans", cursive;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+
+    .container {
+        width: 100%;
+        min-height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.primary-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 4em 6em;
+
+    .secondary-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.go-to-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 2em;
+
+    .nav-btn {
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: black;
+        padding: 0.5em 1.5em;
+
+        border: none;
+        box-shadow: 10px 10px 10px 3px rgb(200, 196, 196);
+        background-color: whitesmoke;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+//Navbar Css
+.navbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 0.5em 1em;
+
+    .logo-container {
+        margin-left: 5.5em;
+        font-size: 1.25rem;
+        h1 {
+            font-family: "Edu NSW ACT Foundation", cursive;
+            font-family: "Shantell Sans", cursive;
+            font-size: 2.5rem;
+            font-weight: bolder;
+            background-color: transparent;
+
+            .heading {
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+            }
+        }
+    }
+
+    .menu-container {
+        width: 50%;
+        background-color: transparent;
+        .navigation {
+            width: 100%;
+            background-color: transparent;
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+                li {
+                    list-style: none;
+
+                    .field {
+                        text-decoration: none;
+                        color: rgb(0, 0, 0);
+                        font-size: 1.25rem;
+                    }
+
+                    .active {
+                        text-decoration: none;
+                        color: rgb(122, 126, 126);
+                        font-size: 1.5rem;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Home Css
+
+.intro-container {
+    display: block;
+    margin-left: 2em;
+    p {
+        font-size: 2rem;
+    }
+    h1 {
+        font-size: 3.5rem;
+        font-weight: bolder;
+    }
+}
+
+.home-image-container {
+    margin-right: 5em;
+
+    .gif {
+        height: 22em;
+        width: 24em;
+        border: none;
+        outline: none;
+    }
+}
+
+.click-here {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+    margin-left: 2.5em;
+}
+
+//About CSS
+.about-secondary-container {
+    margin-top: 3em;
+    padding: 4em 5em;
+    margin-bottom: 3em;
+
+    .about-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 2em;
+
+        align-items: flex-end;
+        border-right: 5px solid black;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bolder;
+        }
+    }
+
+    .detail-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 3em;
+    }
+}
+
+//Technology CSS
+
+#tech-secondary-container {
+    margin-top: -2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .skill-intro {
+        // padding: 0 2em;
+        margin-left: 2em;
+        margin-bottom: 0.8em;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-bottom: 3.5px solid black;
+    }
+}
+
+.parent-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.child-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0.5em;
+
+    .icon-container {
+        svg {
+            font-size: 2rem;
+        }
+    }
+    .skillbar-container {
+        width: 50vw;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-left: 1em;
+        padding: 0.5em 1em;
+
+        h1 {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .skillbar {
+            width: 100%;
+            height: 10px;
+            border-radius: 20px;
+            background-color: rgb(236, 233, 233);
+            border: 2px solid black;
+            padding: 0.1em;
+
+            .progress {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                overflow: hidden;
+                width: 0;
+                height: 100%;
+                opacity: 1;
+                background-color: rgb(62, 159, 191);
+                border-radius: 20px;
+                transition: width 2s;
+
+                span {
+                    line-height: 20px;
+                    font-size: 0.1rem;
+                    font-weight: bold;
+                    color: black;
+                    margin-left: 0.2em;
+                }
+            }
+        }
+    }
+    .percentage {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+}
+
+//Education CSS
+
+.edu-secondary-container {
+    margin-left: 1em;
+    margin-top: 2em;
+    .edu-info-container {
+        padding: 1em 0;
+
+        .studies {
+            margin-bottom: 0.5em;
+            text-decoration: underline;
+        }
+        .field {
+            padding-bottom: 0.5em;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+    .edu-image-container {
+        .gif {
+            margin-top: -2em;
+            height: 25em;
+            width: 28em;
+            border: none;
+            outline: none;
+            margin-right: 7em;
+        }
+    }
+}
+
+//Contact CSS
+
+.contact-secondary-container {
+    .contact-info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        h3 {
+            font-size: 1.5rem;
+            text-decoration: underline;
+            margin-bottom: 1em;
+        }
+        p {
+            font-size: 1.1rem;
+            text-align: center;
+            width: 50%;
+        }
+    }
+}
+
+.social-media-container {
+    width: 100%;
+    margin-top: 2em;
+    .contact-parent-container {
+        width: 100%;
+        height: 40vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 4em 3em;
+
+        .social-media {
+            width: 15%;
+            height: 100%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 5px rgb(209, 205, 205);
+
+            a {
+                max-width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    color: black;
+                    font-size: 3em;
+                }
+            }
+        }
+    }
+}
+
+//Footer CSS
+
+.footer-container {
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+    font-family: "Poppins", sans-serif;
+   
+    background-color: black;
+
+    .contact-parent-container {
+        display: flex;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: black;
+        
+        .social-media{
+            margin: 0 1em;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            svg{
+                color: white;
+                font-size: 0.9rem;
+
+            }
+        }
+    }
+
+    .copyright{
+        color: white;
+        font-size: 0.9rem;
+    }
+
+    .email{
+        color: white;
+        font-size: 0.9rem;
+    }
+}
