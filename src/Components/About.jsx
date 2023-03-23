@@ -17,7 +17,7 @@ const About = () => {
               entry-level position in the industry alongside a company that will
               continuously motivate and drive me to do my best and improve my
               skills and abilities in order to be able to assist the company in
-              achieving its missions and goals.
+              achieving its missions and goals.  
             </p>
           </div>
         </div>

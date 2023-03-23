@@ -347,4 +347,42 @@
 .footer-container .email {
   color: white;
   font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1024px), screen and (max-height: 1366px) {
+  .home-image-container {
+    margin-right: 4em;
+  }
+  .home-image-container .gif {
+    height: 18em;
+    width: 22em;
+  }
+  .click-here {
+    margin-top: 4em;
+  }
+  .about-secondary-container {
+    margin-top: 6em;
+  }
+  .about-secondary-container .about-container p {
+    font-size: 1.5rem;
+  }
+  .about-secondary-container .about-container h1 {
+    font-size: 2rem;
+  }
+  #tech-secondary-container {
+    margin-top: 4em;
+    margin-left: 6em;
+  }
+  .edu-secondary-container {
+    margin-left: 2em;
+  }
+  .edu-image-container {
+    display: none;
+  }
+  .contact-secondary-container {
+    margin-top: 4em;
+  }
+  .social-media-container .contact-parent-container {
+    height: 20vh;
+  }
 }/*# sourceMappingURL=index.css.map */

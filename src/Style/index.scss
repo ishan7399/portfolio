@@ -357,7 +357,6 @@
 //Footer CSS
 
 .footer-container {
-    
     width: 100%;
     display: flex;
     align-items: center;
@@ -365,7 +364,7 @@
     position: fixed;
     bottom: 0;
     font-family: "Poppins", sans-serif;
-   
+
     background-color: black;
 
     .contact-parent-container {
@@ -374,27 +373,81 @@
         justify-content: space-evenly;
         align-items: center;
         background-color: black;
-        
-        .social-media{
+
+        .social-media {
             margin: 0 1em;
             display: flex;
-            justify-content:center;
-            align-items:center;
-            svg{
+            justify-content: center;
+            align-items: center;
+            svg {
                 color: white;
                 font-size: 0.9rem;
-
             }
         }
     }
 
-    .copyright{
+    .copyright {
         color: white;
         font-size: 0.9rem;
     }
 
-    .email{
+    .email {
         color: white;
         font-size: 0.9rem;
     }
+}
+
+//Media Query for responsive websites
+
+//for 1024*1366
+
+@media screen and (max-width: 1024px), screen and (max-height: 1366px) {
+    .home-image-container {
+        margin-right: 4em;
+        .gif {
+            height: 18em;
+            width: 22em;
+        }
+    }
+
+    .click-here {
+        margin-top: 4em;
+    }
+
+    .about-secondary-container {
+        margin-top: 6em;
+
+        .about-container {
+            p {
+                font-size: 1.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    #tech-secondary-container {
+        margin-top: 4em;
+        margin-left: 6em;
+    }
+
+    .edu-secondary-container {
+        margin-left: 2em;
+    }
+    .edu-image-container {
+        display: none;
+    }
+
+    .contact-secondary-container{
+        margin-top: 4em;
+    }
+    .social-media-container {
+    
+        .contact-parent-container {
+            height: 20vh;
+        }
+    }
+
+  
 }

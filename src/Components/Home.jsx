@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <div className="primary-container">
-        <div className="secondary-container e">
+        <div className="secondary-container ">
           <div className="intro-container">
             <p>Hii !!!</p>
             <h1> Wanna know about me ??</h1>
