@@ -8,12 +8,20 @@
 .main-container {
     width: 100%;
     height: 100vh;
-
+ 
+    background-image: url('../Photos/background.image.png');
     .container {
         width: 100%;
         display: flex;
         flex-direction: column;
+       
     }
+}
+
+.main-container::before{
+   
+    z-index: -1;
+    opacity: 0.8;
 }
 
 .primary-container {
@@ -60,6 +68,7 @@
     align-items: center;
     background-color: transparent;
     padding: 0.5em 1em;
+    margin-right: 2em;
 
     .logo-container {
         margin-left: 5.5em;
@@ -79,19 +88,22 @@
     }
 
     .menu-container {
-        width: 50%;
+        width: auto;
         background-color: transparent;
         .navigation {
             width: 100%;
             background-color: transparent;
-            ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            ul {
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
 
                 li {
                     list-style: none;
-                    margin: 0 1em;
+                    margin: 0 2em;
 
                     .field {
                         text-decoration: none;
@@ -107,11 +119,11 @@
                     }
                 }
             }
-
-            .burger-icon {
-                display: none;
-            }
         }
+    }
+
+    .burger-icon{
+        display: none;
     }
 }
 
@@ -763,8 +775,8 @@
         }
     }
 
-    .social-media-container{
-        .contact-parent-container{
+    .social-media-container {
+        .contact-parent-container {
             padding-top: 2em;
         }
     }
@@ -772,9 +784,9 @@
 @media screen and (max-width: 900px) {
     .contact-secondary-container {
         .contact-info-container {
-          h3{
-            font-size: 1.3rem;
-          }
+            h3 {
+                font-size: 1.3rem;
+            }
             p {
                 font-size: 0.9rem;
                 width: 70%;
@@ -782,8 +794,8 @@
         }
     }
 
-    .social-media-container{
-        .contact-parent-container{
+    .social-media-container {
+        .contact-parent-container {
             padding-top: 2em;
         }
     }
@@ -792,17 +804,16 @@
 @media screen and (max-width: 790px) {
     .contact-secondary-container {
         .contact-info-container {
-          
             p {
                 width: 100%;
             }
         }
     }
 
-    .social-media-container{
-        .contact-parent-container{
+    .social-media-container {
+        .contact-parent-container {
             height: 17.5vh;
-margin-top: 1em;
+            margin-top: 1em;
             .social-media {
                 a {
                     svg {
@@ -815,48 +826,145 @@ margin-top: 1em;
 }
 
 @media screen and (max-width: 640px) {
-
-    .social-media-container{
-        .contact-parent-container{
-             height: 15vh;
+    .social-media-container {
+        .contact-parent-container {
+            height: 15vh;
         }
     }
 }
 @media screen and (max-width: 550px) {
-
-    .social-media-container{
-        .contact-parent-container{
-             height: 12.5vh;
+    .social-media-container {
+        .contact-parent-container {
+            height: 12.5vh;
         }
     }
 }
-
 
 //Footer Css
 
-@media screen and (max-width:780px) {
- .footer-container{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+@media screen and (max-width: 780px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-    .contact-parent-container{
-        margin: 0.5em 0;
+        .contact-parent-container {
+            margin: 0.5em 0;
 
-        .social-media{
-        
-          
-            svg{
-                font-size: 1.5rem;
+            .social-media {
+                svg {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .copyright {
+            margin: 0.25em 0;
+        }
+        .email {
+            display: none;
+        }
+    }
+}
+
+//Navigation CSS
+
+@media (max-width: 1220px) {
+    .navbar-container {
+        .logo-container {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        .menu-container {
+            margin-right: 4em;
+            .navigation {
+                ul {
+                    li {
+                        margin: 0 1em;
+                        .field {
+                            font-size: 1rem;
+                        }
+
+                        .active {
+                            font-size: 1.25rem;
+                        }
+                    }
+                }
             }
         }
     }
-    .copyright{
-        margin: 0.25em 0;
-
-    }
-    .email{
-        display: none;
-    }
- }
 }
+
+@media (max-width: 1030px) {
+    .navbar-container {
+        .menu-container {
+            margin-right: 2em;
+        }
+    }
+}
+
+@media (max-width: 870px) {
+    .navbar-container {
+        .logo-container {
+            margin-left: 3em;
+          
+        }
+        .menu-container {
+            margin-right: 0.5em;
+        }
+    }
+}
+@media (max-width: 790px) {
+    .navbar-container {
+    padding:1em 0;
+    justify-content: space-between;
+    margin-right: 0;
+  
+        .menu-container {
+
+            margin-right: 0;
+            display: flex;
+           .navigation{
+            
+            padding: 0.5em 0;
+            background-color: black;
+            z-index: 1;
+            opacity: 0.9;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+         
+            ul{
+                li{
+                    .field {
+                        font-size: 0.8rem;
+                         color: white;
+                    }
+
+                    .active{
+                        color: rgb(193, 193, 193);
+                        font-size: 1rem;
+                    }
+                }
+            }
+           }
+        }
+
+      .burger-icon{
+        background-color: black;
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .burger{
+            cursor: pointer;
+            svg{
+                font-size: 2rem;
+              color: white;
+        
+            }
+        }
+      }
+    }
+}
+
