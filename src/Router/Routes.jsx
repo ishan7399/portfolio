@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import NavbarRoutes from "./Navbar.Routes";
 import { BrowserRouter } from "react-router-dom";
-import "../Style/index.css";
+import "../Style/index.scss";
 import React from "react";
 
 
@@ -17,9 +17,7 @@ const Routes = () => {
         >
           <Navbar></Navbar>
           <div className="container">
-            <NavbarRoutes>
-            </NavbarRoutes>
-        
+            <NavbarRoutes />
           </div>
         </div>
       </BrowserRouter>

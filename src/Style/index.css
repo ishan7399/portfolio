@@ -1,11 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;0,900;1,100;1,200;1,300;1,600;1,700;1,800;1,900&family=Shantell+Sans:ital@0;1&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Edu NSW ACT Foundation", cursive;
   font-family: "Poppins", sans-serif;
-  font-family: "Shantell Sans", cursive;
 }
 
 .main-container {
@@ -14,8 +11,6 @@
 }
 .main-container .container {
   width: 100%;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
   display: flex;
   flex-direction: column;
 }
@@ -24,7 +19,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 4em 6em;
+  padding: 3em 4em;
 }
 .primary-container .secondary-container {
   display: flex;
@@ -91,6 +86,7 @@
 }
 .navbar-container .menu-container .navigation ul li {
   list-style: none;
+  margin: 0 1em;
 }
 .navbar-container .menu-container .navigation ul li .field {
   text-decoration: none;
@@ -102,6 +98,9 @@
   color: rgb(122, 126, 126);
   font-size: 1.5rem;
   font-weight: bolder;
+}
+.navbar-container .menu-container .navigation .burger-icon {
+  display: none;
 }
 
 .intro-container {
@@ -146,7 +145,6 @@
   flex-direction: column;
   padding-right: 2em;
   align-items: flex-end;
-  border-right: 5px solid black;
 }
 .about-secondary-container .about-container h1 {
   font-size: 3rem;
@@ -157,13 +155,15 @@
   justify-content: flex-start;
   align-items: center;
   padding: 0 3em;
+  border-left: 5px solid black;
 }
 
 #tech-secondary-container {
   margin-top: -2em;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 #tech-secondary-container .skill-intro {
   margin-left: 2em;
@@ -172,25 +172,23 @@
   font-weight: bold;
   border-bottom: 3.5px solid black;
 }
-
-.parent-container {
+#tech-secondary-container .parent-container {
   width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
-.child-container {
+#tech-secondary-container .parent-container .child-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 0.5em;
 }
-.child-container .icon-container svg {
+#tech-secondary-container .parent-container .child-container .icon-container svg {
   font-size: 2rem;
 }
-.child-container .skillbar-container {
+#tech-secondary-container .parent-container .child-container .skillbar-container {
   width: 50vw;
   display: flex;
   flex-direction: column;
@@ -199,12 +197,12 @@
   margin-left: 1em;
   padding: 0.5em 1em;
 }
-.child-container .skillbar-container h1 {
+#tech-secondary-container .parent-container .child-container .skillbar-container h1 {
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 5px;
 }
-.child-container .skillbar-container .skillbar {
+#tech-secondary-container .parent-container .child-container .skillbar-container .skillbar {
   width: 100%;
   height: 10px;
   border-radius: 20px;
@@ -212,7 +210,7 @@
   border: 2px solid black;
   padding: 0.1em;
 }
-.child-container .skillbar-container .skillbar .progress {
+#tech-secondary-container .parent-container .child-container .skillbar-container .skillbar .progress {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -224,14 +222,14 @@
   border-radius: 20px;
   transition: width 2s;
 }
-.child-container .skillbar-container .skillbar .progress span {
+#tech-secondary-container .parent-container .child-container .skillbar-container .skillbar .progress span {
   line-height: 20px;
   font-size: 0.1rem;
   font-weight: bold;
   color: black;
   margin-left: 0.2em;
 }
-.child-container .percentage {
+#tech-secondary-container .parent-container .child-container .percentage {
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -349,40 +347,314 @@
   font-size: 0.9rem;
 }
 
-@media screen and (max-width: 1024px), screen and (max-height: 1366px) {
+@media screen and (max-width: 800) {
+  .primary-container {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 1098px) {
   .home-image-container {
-    margin-right: 4em;
+    margin-right: 6em;
   }
   .home-image-container .gif {
-    height: 18em;
+    height: 20em;
     width: 22em;
   }
-  .click-here {
-    margin-top: 4em;
+}
+@media screen and (max-width: 1098px) {
+  .home-image-container {
+    margin-right: 3em;
   }
-  .about-secondary-container {
-    margin-top: 6em;
+  .home-image-container .gif {
+    height: 15em;
+    width: 15em;
   }
-  .about-secondary-container .about-container p {
-    font-size: 1.5rem;
-  }
-  .about-secondary-container .about-container h1 {
-    font-size: 2rem;
-  }
-  #tech-secondary-container {
-    margin-top: 4em;
-    margin-left: 6em;
-  }
-  .edu-secondary-container {
-    margin-left: 2em;
-  }
-  .edu-image-container {
+}
+@media screen and (max-width: 880px) {
+  .home-image-container {
     display: none;
   }
-  .contact-secondary-container {
-    margin-top: 4em;
+}
+@media screen and (max-width: 595px) {
+  .intro-container h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 545px) {
+  .intro-container h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 1402px) {
+  .about-secondary-container .about-container h1 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+}
+@media screen and (max-width: 1308px) {
+  .about-secondary-container .about-container h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  .about-secondary-container .detail-container p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 1308px) {
+  .about-secondary-container {
+    flex-direction: column;
+    margin-top: 1.5em;
+  }
+  .about-secondary-container .about-container {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+  }
+  .about-secondary-container .about-container h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+  .about-secondary-container .detail-container {
+    border: none;
+  }
+  .about-secondary-container .detail-container p {
+    align-items: center;
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 875px) {
+  .about-secondary-container {
+    margin-top: 2.5em;
+    flex-direction: column;
+    padding: 0;
+  }
+  .about-secondary-container .detail-container {
+    border: none;
+  }
+  .about-secondary-container .detail-container p {
+    align-items: center;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 752px) {
+  .about-secondary-container .about-container h3 {
+    font-size: 1rem;
+  }
+  .about-secondary-container .about-container h1 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+  .about-secondary-container .detail-container {
+    border: none;
+  }
+  .about-secondary-container .detail-container p {
+    align-items: center;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  #tech-secondary-container .skill-intro {
+    font-size: 1.25rem;
+  }
+  #tech-secondary-container .parent-container .child-container .icon-container svg {
+    font-size: 1.5rem;
+  }
+  #tech-secondary-container .parent-container .child-container .skillbar-container h1 {
+    font-size: 0.9rem;
+  }
+  #tech-secondary-container .parent-container .child-container .percentage {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  #tech-secondary-container .skill-intro {
+    font-size: 1rem;
+  }
+  #tech-secondary-container .parent-container .child-container .icon-container svg {
+    font-size: 1.25rem;
+  }
+  #tech-secondary-container .parent-container .child-container .skillbar-container h1 {
+    font-size: 0.9rem;
+  }
+  #tech-secondary-container .parent-container .child-container .percentage {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 1290px) {
+  .edu-secondary-container {
+    margin-top: 1em;
+  }
+  .edu-secondary-container .edu-image-container .gif {
+    height: 20em;
+    width: 22em;
+  }
+}
+@media screen and (max-width: 1190px) {
+  .edu-secondary-container {
+    margin-top: 1em;
+  }
+  .edu-secondary-container .edu-info-container .studies {
+    font-size: 1.75rem;
+  }
+  .edu-secondary-container .edu-image-container .gif {
+    height: 20em;
+    width: 22em;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .edu-secondary-container .edu-info-container .studies {
+    font-size: 1.75rem;
+  }
+  .edu-secondary-container .edu-info-container .field {
+    font-size: 1rem;
+  }
+  .edu-secondary-container .edu-image-container .gif {
+    height: 15em;
+    width: 17em;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .edu-secondary-container {
+    margin-top: 0;
+  }
+  .edu-secondary-container .edu-info-container .studies {
+    font-size: 2rem;
+  }
+  .edu-secondary-container .edu-info-container .field {
+    font-size: 1.25rem;
+  }
+  .edu-secondary-container .edu-image-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 770px) {
+  .edu-secondary-container .edu-info-container .studies {
+    font-size: 1.75rem;
+  }
+  .edu-secondary-container .edu-info-container .field {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 770px) {
+  .edu-secondary-container .edu-info-container .studies {
+    font-size: 1.6rem;
+  }
+  .edu-secondary-container .edu-info-container .field {
+    font-size: 0.9rem;
+  }
+  .edu-secondary-container .edu-image-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 590px) {
+  .edu-secondary-container .edu-info-container .studies {
+    font-size: 1.25rem;
+  }
+  .edu-secondary-container .edu-info-container .field {
+    font-size: 1rem;
+  }
+  .edu-secondary-container .edu-image-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 530px) {
+  .edu-secondary-container .edu-info-container .studies {
+    font-size: 1rem;
+  }
+  .edu-secondary-container .edu-info-container .field {
+    font-size: 0.75rem;
+  }
+  .edu-secondary-container .edu-image-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .social-media-container .contact-parent-container {
+    height: 35vh;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .social-media-container .contact-parent-container {
+    padding: 2em;
+    height: 30vh;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .social-media-container .contact-parent-container {
+    padding: 3em 2em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .social-media-container .contact-parent-container {
+    padding: 1em 0;
+    height: 20vh;
+  }
+  .social-media-container .contact-parent-container .social-media a svg {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .contact-secondary-container .contact-info-container h3 {
+    font-size: 1.4rem;
+  }
+  .contact-secondary-container .contact-info-container p {
+    font-size: 1rem;
   }
   .social-media-container .contact-parent-container {
-    height: 20vh;
+    padding-top: 2em;
+  }
+}
+@media screen and (max-width: 900px) {
+  .contact-secondary-container .contact-info-container h3 {
+    font-size: 1.3rem;
+  }
+  .contact-secondary-container .contact-info-container p {
+    font-size: 0.9rem;
+    width: 70%;
+  }
+  .social-media-container .contact-parent-container {
+    padding-top: 2em;
+  }
+}
+@media screen and (max-width: 790px) {
+  .contact-secondary-container .contact-info-container p {
+    width: 100%;
+  }
+  .social-media-container .contact-parent-container {
+    height: 17.5vh;
+    margin-top: 1em;
+  }
+  .social-media-container .contact-parent-container .social-media a svg {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 640px) {
+  .social-media-container .contact-parent-container {
+    height: 15vh;
+  }
+}
+@media screen and (max-width: 550px) {
+  .social-media-container .contact-parent-container {
+    height: 12.5vh;
+  }
+}
+@media screen and (max-width: 780px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-container .contact-parent-container {
+    margin: 0.5em 0;
+  }
+  .footer-container .contact-parent-container .social-media svg {
+    font-size: 1.5rem;
+  }
+  .footer-container .copyright {
+    margin: 0.25em 0;
+  }
+  .footer-container .email {
+    display: none;
   }
 }/*# sourceMappingURL=index.css.map */
