@@ -8,18 +8,16 @@
 .main-container {
     width: 100%;
     height: 100vh;
- 
-    background-image: url('../Photos/background.image.png');
+
+    background-image: url("../Photos/background.image.png");
     .container {
         width: 100%;
         display: flex;
         flex-direction: column;
-       
     }
 }
 
-.main-container::before{
-   
+.main-container::before {
     z-index: -1;
     opacity: 0.8;
 }
@@ -96,7 +94,7 @@
             display: flex;
             align-items: center;
             justify-content: space-evenly;
-            ul {
+            .desktop-nav {
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
@@ -122,7 +120,7 @@
         }
     }
 
-    .burger-icon{
+    .burger-icon {
         display: none;
     }
 }
@@ -878,7 +876,7 @@
         .menu-container {
             margin-right: 4em;
             .navigation {
-                ul {
+                .desktop-nav {
                     li {
                         margin: 0 1em;
                         .field {
@@ -907,64 +905,174 @@
     .navbar-container {
         .logo-container {
             margin-left: 3em;
-          
         }
         .menu-container {
             margin-right: 0.5em;
         }
     }
 }
-@media (max-width: 790px) {
+
+@media screen and (max-width: 730px) {
+
+   .contact-secondary-container{
+    margin-top: 2em;
+   }
+
     .navbar-container {
-    padding:1em 0;
-    justify-content: space-between;
-    margin-right: 0;
-  
+        padding-right: 0;
+
+        .logo-container{
+            margin-left: 1.5em;
+            h1{
+                font-size: 2rem;
+            }
+        }
         .menu-container {
-
             margin-right: 0;
-            display: flex;
-           .navigation{
-            
-            padding: 0.5em 0;
-            background-color: black;
-            z-index: 1;
-            opacity: 0.9;
-            border-bottom-left-radius: 20px;
-            border-top-left-radius: 20px;
-         
-            ul{
-                li{
-                    .field {
-                        font-size: 0.8rem;
-                         color: white;
-                    }
+            .navigation {
+                .desktop-nav {
+                    display: none;
+                }
 
-                    .active{
-                        color: rgb(193, 193, 193);
-                        font-size: 1rem;
+                .burger-nav {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    background-color: black;
+                    padding: 0 0.5em;
+                    border-radius: 20px;
+                    transition: all 1s ease;
+                    border: 20px;
+                
+
+                    li {
+                        list-style: none;
+                        margin: 0 0.75em;
+                        padding: 0.25em 0;
+
+                        .field {
+                            text-decoration: none;
+                            color: white;
+                            font-size: 0.8rem;
+                        }
+
+                        .active {
+                            text-decoration: none;
+                            color: rgb(184, 192, 192);
+                            font-size: 1rem;
+                            font-weight: bolder;
+                        }
+                    }
+                }
+                .burger-icon {
+                    margin-right: 1.5em;
+                    display: block;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    outline: none;
+                    padding: 0.25em 0;
+                    background-color: transparent;
+                    transition: all 1s ease;
+                    cursor: pointer;
+                    svg {
+                        color: black;
+                        font-size: 2rem;
+                        font-weight: bolder;
                     }
                 }
             }
-           }
         }
-
-      .burger-icon{
-        background-color: black;
-        border: none;
-        outline: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .burger{
-            cursor: pointer;
-            svg{
-                font-size: 2rem;
-              color: white;
-        
-            }
-        }
-      }
     }
+
+  
 }
 
+
+@media (max-width: 660px) {
+.contact-secondary-container{
+    margin-top: 6em;
+}
+
+   .navbar-container{
+
+    .logo-container{
+        margin-left: 1.25em;
+        h1{
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+
+    .menu-container{
+        .navigation{
+
+            .burger-icon{
+                margin-right: 1em;
+            }
+        }
+    }
+   }
+    
+}
+
+@media (max-width:600px) {
+
+    .intro-container,
+    .about-secondary-container,
+    .edu-secondary-container,
+    .contact-secondary-container
+    {
+        margin-top: 5em;
+    }
+
+    #tech-secondary-container {
+        margin-top: 3em;
+    }
+    .navbar-container{
+        padding-left: 0;
+        flex-direction: column;
+        .logo-container{
+            position: absolute;
+            left: 1em;
+            top: 0.5em;
+        }
+
+        .menu-container{
+           
+            .navigation{
+                .burger-nav{
+                    padding: 0;
+                    position: absolute;
+                    top: 0;
+                    flex-direction: column;
+                    width: 100%;
+                    background-color: rgb(187, 187, 187);
+                    border-radius: 0;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+
+
+                    transition: all 1s ease-in;
+
+                    li{
+                        margin: 0.25em 0;
+                        .field{
+                            color: black;
+                            font-size: 1rem;
+
+                        }
+                    }
+                }
+                .burger-icon{
+                    position: absolute;
+                    right: 1em;
+                    top: 0.5em;
+                }
+            }
+        }
+    }
+    
+}

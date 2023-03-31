@@ -7,11 +7,11 @@ function Parent() {
   return (
     <>
       <div className="parent-container">
-        {Items.map((val) => {
+        {Items.map((val ,index) => {
           return [
             <>
               <Child
-                key={val.id}
+                key={index}
                 icon={val.icon}
                 skill={val.skill}
                 percentage={val.percentage}

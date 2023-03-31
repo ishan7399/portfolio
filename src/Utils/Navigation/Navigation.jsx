@@ -1,28 +1,23 @@
 import React, { useState } from "react";
 import "../../Style/index.css";
 import { NavLink } from "react-router-dom";
-import Burger from "./Burger";
+import MenuOpenIcon from "@mui/icons-material/MenuOpen";
+import CloseIcon from '@mui/icons-material/Close';
 const Navigation = () => {
   const [burger, setBurger] = useState(false);
 
-  const Toogle = () => {
-    const ShowNavbar = () => {
-      setBurger(burger);
-    };
-    const HideNavbar = () =>{
-        const hideNavbar = {
-            display:'none'
-            
-        }
-    }
-  };
+
 
   return (
     <>
       <div className="menu-container">
-        <div className={burger ? "burger-nav" : "navigation"}>
-          <ul>
-            <li>
+        <div className="navigation">
+          <ul className={burger?"burger-nav":"desktop-nav"}
+          onClick={() => setBurger(false)}
+          
+          >
+
+            <li >
               <NavLink className="field" to="/">
                 Home
               </NavLink>
@@ -48,10 +43,13 @@ const Navigation = () => {
               </NavLink>
             </li>
           </ul>
-        </div>
-        <button className="burger-icon" onClick={Toogle}>
-          <Burger />
+          <button className="burger-icon"
+          onClick={() => setBurger(!burger)}
+          >
+      {burger?<CloseIcon/>:<MenuOpenIcon/>}
         </button>
+        </div>
+    
       </div>
     </>
   );
