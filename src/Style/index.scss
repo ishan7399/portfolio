@@ -1053,9 +1053,15 @@
                             width: 100%;
                             color: black;
                             font-size: 1rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
                         }
                         .active{
                             width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
                         }
                     }
                 }

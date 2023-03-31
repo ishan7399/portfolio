@@ -810,11 +810,22 @@
     transition: all 1s ease-in;
   }
   .navbar-container .menu-container .navigation .burger-nav li {
+    width: 100%;
     margin: 0.25em 0;
   }
   .navbar-container .menu-container .navigation .burger-nav li .field {
+    width: 100%;
     color: black;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-container .menu-container .navigation .burger-nav li .active {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .navbar-container .menu-container .navigation .burger-icon {
     position: absolute;
