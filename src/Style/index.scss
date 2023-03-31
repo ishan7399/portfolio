@@ -1047,10 +1047,15 @@
                     transition: all 1s ease-in;
 
                     li {
+                        width: 100%;
                         margin: 0.25em 0;
                         .field {
+                            width: 100%;
                             color: black;
                             font-size: 1rem;
+                        }
+                        .active{
+                            width: 100%;
                         }
                     }
                 }
