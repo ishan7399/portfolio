@@ -7,7 +7,11 @@ const Parent = () => {
     <>
     <div className="contact-parent-container">
       {ContactData.map((val , index) => {
-        return <Child key={index} icon={val.icon} link={val.link} />;
+        return <Child 
+        key={index} 
+        icon={val.icon}
+         link={val.link} 
+         />;
       })}
       </div>
     </>
