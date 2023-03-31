@@ -4,8 +4,6 @@ import "../Style/index.css";
 import "animate.css";
 import Navigation from "../Utils/Navigation/Navigation";
 
-
-
 const Navbar = () => {
   return (
     <>
@@ -18,7 +16,7 @@ const Navbar = () => {
           </h1>
         </div>
 
-<Navigation/>
+        <Navigation />
       </div>
     </>
   );

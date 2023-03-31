@@ -4,15 +4,11 @@ import { BrowserRouter } from "react-router-dom";
 import "../Style/index.css";
 import React from "react";
 
-
 const Routes = () => {
   return (
     <>
       <BrowserRouter>
-        <div
-          className="main-container"
-          
-        >
+        <div className="main-container">
           <Navbar></Navbar>
           <div className="container">
             <NavbarRoutes />
