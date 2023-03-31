@@ -811,7 +811,7 @@
   }
   .navbar-container .menu-container .navigation .burger-nav li {
     width: 100%;
-    margin: 0.25em 0;
+    padding: 0.25em 0;
   }
   .navbar-container .menu-container .navigation .burger-nav li .field {
     width: 100%;
