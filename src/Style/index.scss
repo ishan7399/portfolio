@@ -843,7 +843,7 @@
 @media screen and (max-width: 780px) {
     .footer-container {
         flex-direction: column;
-        align-items: center;
+        align-items: space-around;
         justify-content: center;
 
         .contact-parent-container {
